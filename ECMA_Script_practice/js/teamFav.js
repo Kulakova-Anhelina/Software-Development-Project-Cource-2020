@@ -34,30 +34,32 @@ const team = {
   ,
   get games() {
     return this._games;
-},
-get players() {
-  return this._players;
-},
+  },
+  get players() {
+    return this._players;
+  },
 
-addPlayer(firstName, lastName, age) {
-  let player = {
-    firstName: firstName,
-    lastName: lastName,
-    age: age
-  };
+  addPlayer(firstName, lastName, age) {
+    let player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age
+    };
 
-  this.players.push(player);
-},
+    this.players.push(player);
+  },
 
-addGame(opp, myPts, oppPts) {
-  const game = {
-    opponent: opp,
-    teamPoints: myPts,
-    opponentPoints: oppPts
-  };
-  this.games.push(game);
-}
+  addGame(opp, myPts, oppPts) {
+    const game = {
+      opponent: opp,
+      teamPoints: myPts,
+      opponentPoints: oppPts
+    };
+    this.games.push(game);
+  }
 };
 
 team.addPlayer('Steph', 'Curry', 28);
 team.addGame('Titans', 100, 98);
+console.log(team.players)
+console.log(team.games)
